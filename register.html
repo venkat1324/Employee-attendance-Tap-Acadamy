@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register — Attendance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card" style="max-width:700px;margin:28px auto;padding:20px">
+      <div class="header">
+        <div class="brand">
+          <div class="logo">AT</div>
+          <div><div style="font-weight:700">Create account</div><div class="small">Join your company</div></div>
+        </div>
+        <div class="small"><a href="login.html">Have an account? Sign in</a></div>
+      </div>
+
+      <form id="regForm" class="form">
+        <div class="field"><label>Name</label><input class="input" id="name" required></div>
+        <div class="field"><label>Email</label><input class="input" id="email" type="email" required></div>
+        <div class="field"><label>Password</label><input class="input" id="password" type="password" required></div>
+        <div class="field"><label>Employee ID</label><input class="input" id="empid" placeholder="EMP001" required></div>
+        <div class="field"><label>Department</label><input class="input" id="dept"></div>
+
+        <div class="row">
+          <button class="btn" type="submit">Create account</button>
+          <button class="btn secondary" type="button" onclick="location.href='index.html'">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('regForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Demo: form submitted. Integrate this with your /api/auth/register endpoint.');
+      location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>
